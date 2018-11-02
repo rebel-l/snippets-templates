@@ -10,6 +10,8 @@ export GREP_COLORS='sl=1;31'
 alias viprof="vi ~/.profile"
 alias scprof=". ~/.profile"
 
+alias dockerClean="docker system prune -a --volumes"
+
 function ll(){
 	ls -lah $1
 }
