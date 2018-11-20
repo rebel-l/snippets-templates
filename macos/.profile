@@ -12,6 +12,8 @@ alias scprof=". ~/.profile"
 
 alias dockerClean="docker system prune -a --volumes"
 
+alias showSSHCFG="cat ~/.ssh/config"
+
 function ll(){
 	ls -lah $1
 }
