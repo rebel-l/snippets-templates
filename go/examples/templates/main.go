@@ -46,19 +46,30 @@ func main() {
 		log.Fatalf("Error executing template: %s", err)
 	}
 
-	fmt.Println() // Just a Spacer
+	spacer()
 
 	// Execute specific template
 	if err := tmpl.ExecuteTemplate(os.Stdout, "template-a", tpl.ParamsA); err != nil {
 		log.Fatalf("Error executing template: %s", err)
 	}
 
-	fmt.Println() // Just a Spacer
-	fmt.Println("----------------------------")
-	fmt.Println()
+	spacer()
 
 	// Execute last added template
 	if err := tmpl.Execute(os.Stdout, tpl.ParamsB); err != nil {
 		log.Fatalf("Error executing template: %s", err)
 	}
+
+	spacer()
+
+	// Execute last added template
+	if err := tmpl.Execute(os.Stdout, tpl.ParamsB1); err != nil {
+		log.Fatalf("Error executing template: %s", err)
+	}
+}
+
+func spacer() {
+	fmt.Println()
+	fmt.Println("----------------------------")
+	fmt.Println()
 }
