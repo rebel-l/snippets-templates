@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"html/template"
 	"os"
+	"text/template"
 
 	"github.com/rebel-l/snippets-templates/go/examples/templates/tpl"
 	log "github.com/sirupsen/logrus"
